@@ -2,3 +2,4 @@
 # See the LICENSE file for the full license.
 
 from funencryptions.algorithms import *
+from funencryptions.utils import *
