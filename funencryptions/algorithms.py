@@ -1,9 +1,6 @@
 # Copyright (C) 2013 Julian Metzler
 # See the LICENSE file for the full license.
 
-from datetime import datetime
-import time
-
 def character_code_neighbor_sum(string, decode = False):
 	"""
 	Replaces the characters in the string with Unicode characters by adding the character codes of adjacent characters.
@@ -48,7 +45,9 @@ def character_code_timestamp_date(string, decode = False, fmt = "%d.%m.%Y %H:%M:
 	"""
 	Concatenates the character codes of the string and treats them like UNIX timestamps.
 	"""
+	from datetime import datetime
 	from funencryptions.utils import chunks
+	import time
 	result = u""
 	length = len(string)
 	if decode:

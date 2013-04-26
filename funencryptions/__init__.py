@@ -3,3 +3,4 @@
 
 from funencryptions.algorithms import *
 from funencryptions.utils import *
+from funencryptions import image
