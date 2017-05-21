@@ -12,7 +12,7 @@ def chain(string, functions, decode = False):
 	"""
 	functions = list(functions)
 	for i in range(len(functions)):
-		if type(functions[i]) in [str, unicode]:
+		if type(functions[i]) in [str, str]:
 			functions[i] = getattr(algorithms, functions[i], _dummy)
 	if decode:
 		functions.reverse()

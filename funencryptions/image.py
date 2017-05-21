@@ -25,7 +25,7 @@ def character_code_color_bar(source, height = 1, segment_width = 1):
 		codes = []
 		for i in range(length):
 			codes.append(rgb_to_int(*pixels[i * segment_width, 0][:3]))
-		result = u"".join([unichr(code) for code in codes])
+		result = "".join([chr(code) for code in codes])
 	else:
 		length = len(source)
 		width = length * segment_width
@@ -62,7 +62,7 @@ def character_code_color_matrix(source, segments_per_row = None, max_width = Non
 				if pixels[x * segment_width, y * segment_height][3] == 0:
 					continue
 				codes[y].append(rgb_to_int(*pixels[x * segment_width, y * segment_height][:3]))
-		result = u"".join([u"".join([unichr(c) for c in code]) for code in codes])
+		result = "".join(["".join([chr(c) for c in code]) for code in codes])
 	else:
 		length = len(source)
 		if segments_per_row:
